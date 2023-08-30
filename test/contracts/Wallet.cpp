@@ -535,7 +535,7 @@ BOOST_AUTO_TEST_CASE(remove_owner)
 
 BOOST_AUTO_TEST_CASE(initial_owners)
 {
-	vector<h160> owners{
+	std::vector<h160> owners{
 		h160("0x42c56279432962a17176998a4747d1b4d6ed4367"),
 		h160("0xd4d4669f5ba9f4c27d38ef02a358c339b5560c47"),
 		h160("0xe6716f9544a56c530d868e4bfbacb172315bdead"),
