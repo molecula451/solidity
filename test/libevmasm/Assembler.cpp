@@ -34,7 +34,7 @@
 #include <string>
 #include <tuple>
 
-
+using namespace std;
 using namespace solidity::langutil;
 using namespace solidity::evmasm;
 
@@ -62,15 +62,15 @@ BOOST_AUTO_TEST_CASE(all_assembly_items)
 	};
 	EVMVersion evmVersion = solidity::test::CommonOptions::get().evmVersion();
 	Assembly _assembly{evmVersion, false, {}};
-	auto root_asm = make_shared<std::string>("root.asm");
+	auto root_asm = std::make_shared<std::string>("root.asm");
 	_assembly.setSourceLocation({1, 3, root_asm});
 
 	Assembly _subAsm{evmVersion, false, {}};
-	auto sub_asm = make_shared<std::string>("sub.asm");
+	auto sub_asm = std::make_shared<std::string>("sub.asm");
 	_subAsm.setSourceLocation({6, 8, sub_asm});
 
 	Assembly _verbatimAsm(evmVersion, true, "");
-	auto verbatim_asm = make_shared<std::string>("verbatim.asm");
+	auto verbatim_asm = std::make_shared<std::string>("verbatim.asm");
 	_verbatimAsm.setSourceLocation({8, 18, verbatim_asm});
 
 	// PushImmutable
@@ -246,13 +246,13 @@ BOOST_AUTO_TEST_CASE(immutables_and_its_source_maps)
 				{ *subName, 1 }
 			};
 
-			auto subAsm = make_shared<Assembly>(evmVersion, false, std::string{});
+			auto subAsm = std::make_shared<Assembly>(evmVersion, false, std::string{});
 			for (char i = 0; i < numImmutables; ++i)
 			{
 				for (int r = 0; r < numActualRefs; ++r)
 				{
 					subAsm->setSourceLocation(SourceLocation{10*i, 10*i + 6 + r, subName});
-					subAsm->appendImmutable(string(1, char('a' + i))); // "a", "b", ...
+					subAsm->appendImmutable(std::string(1, char('a' + i))); // "a", "b", ...
 				}
 			}
 
@@ -316,7 +316,7 @@ BOOST_AUTO_TEST_CASE(immutable)
 	_subAsm.appendImmutable("someImmutable");
 	_subAsm.appendImmutable("someOtherImmutable");
 	_subAsm.appendImmutable("someImmutable");
-	shared_ptr<Assembly> _subAsmPtr = std::make_shared<Assembly>(_subAsm);
+	std::shared_ptr<Assembly> _subAsmPtr = std::make_shared<Assembly>(_subAsm);
 
 	_assembly.append(u256(42));
 	_assembly.append(u256(0));
@@ -330,9 +330,9 @@ BOOST_AUTO_TEST_CASE(immutable)
 
 	checkCompilation(_assembly);
 
-	string genericPush0 = evmVersion.hasPush0() ? "5f" : "6000";
+	std::string genericPush0 = evmVersion.hasPush0() ? "5f" : "6000";
 	// PUSH1 0x1b v/s PUSH1 0x19
-	string dataOffset = evmVersion.hasPush0() ? "6019" : "601b" ;
+	std::string dataOffset = evmVersion.hasPush0() ? "6019" : "601b" ;
 
 	BOOST_CHECK_EQUAL(
 		_assembly.assemble().toHex(),
