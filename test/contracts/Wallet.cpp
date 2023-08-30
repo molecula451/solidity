@@ -38,7 +38,7 @@
 
 #include <test/libsolidity/SolidityExecutionFramework.h>
 
-using namespace std;
+
 using namespace solidity::test;
 using namespace solidity::util;
 
@@ -445,7 +445,7 @@ class WalletTestFramework: public SolidityExecutionFramework
 protected:
 	void deployWallet(
 		u256 const& _value = 0,
-		vector<h160> const& _owners = vector<h160>{},
+		std::vector<h160> const& _owners = std::vector<h160>{},
 		u256 _required = 1,
 		u256 _dailyLimit = 0
 	)
