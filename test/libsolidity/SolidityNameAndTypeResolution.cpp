@@ -32,7 +32,7 @@
 
 #include <string>
 
-using namespace std;
+
 using namespace solidity::langutil;
 
 namespace solidity::frontend::test
