@@ -52,7 +52,7 @@ public:
 	void testCreationTimeGas(std::string const& _sourceCode, u256 const& _tolerance = u256(0))
 	{
 		compileAndRun(_sourceCode);
-		auto state = make_shared<KnownState>();
+		auto state = std::make_shared<KnownState>();
 		PathGasMeter meter(*m_compiler.assemblyItems(m_compiler.lastContractName()), solidity::test::CommonOptions::get().evmVersion());
 		GasMeter::GasConsumption gas = meter.estimateMax(0, state);
 		u256 bytecodeSize(m_compiler.runtimeObject(m_compiler.lastContractName()).bytecode.size());
@@ -73,7 +73,7 @@ public:
 
 	/// Compares the gas computed by PathGasMeter for the given signature (but unknown arguments)
 	/// against the actual gas usage computed by the VM on the given set of argument variants.
-	void testRunTimeGas(string const& _sig, vector<bytes> _argumentVariants, u256 const& _tolerance = u256(0))
+	void testRunTimeGas(std::string const& _sig, std::vector<bytes> _argumentVariants, u256 const& _tolerance = u256(0))
 	{
 		u256 gasUsed = 0;
 		GasMeter::GasConsumption gas;
@@ -82,8 +82,8 @@ public:
 		{
 			sendMessage(hash.asBytes() + arguments, false, 0);
 			BOOST_CHECK(m_transactionSuccessful);
-			gasUsed = max(gasUsed, m_gasUsed);
-			gas = max(gas, gasForTransaction(hash.asBytes() + arguments, false));
+			gasUsed = std::max(gasUsed, m_gasUsed);
+			gas = std::max(gas, gasForTransaction(hash.asBytes() + arguments, false));
 		}
 
 		gas += GasEstimator(solidity::test::CommonOptions::get().evmVersion()).functionalEstimation(
