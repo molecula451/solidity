@@ -42,7 +42,6 @@
 #include <optional>
 #include <string>
 
-using namespace std;
 using namespace solidity::langutil;
 using namespace solidity::yul;
 
