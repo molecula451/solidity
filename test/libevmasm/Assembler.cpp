@@ -34,9 +34,10 @@
 #include <string>
 #include <tuple>
 
-using namespace std;
+
 using namespace solidity::langutil;
 using namespace solidity::evmasm;
+using namespace std::string_literals;
 
 namespace solidity::frontend::test
 {
@@ -221,11 +222,11 @@ BOOST_AUTO_TEST_CASE(immutables_and_its_source_maps)
 	// Tests for 1, 2, 3 number of immutables.
 	for (int numImmutables = 1; numImmutables <= 3; ++numImmutables)
 	{
-		BOOST_TEST_MESSAGE("NumImmutables: "s + to_string(numImmutables));
+		BOOST_TEST_MESSAGE("NumImmutables: "s + std::to_string(numImmutables));
 		// Tests for the cases 1, 2, 3 occurrences of an immutable reference.
 		for (int numActualRefs = 1; numActualRefs <= 3; ++numActualRefs)
 		{
-			BOOST_TEST_MESSAGE("NumActualRefs: "s + to_string(numActualRefs));
+			BOOST_TEST_MESSAGE("NumActualRefs: "s + std::to_string(numActualRefs));
 			auto const NumExpectedMappings =
 				(
 					2 +                        // PUSH <a> PUSH <b>
@@ -262,7 +263,7 @@ BOOST_AUTO_TEST_CASE(immutables_and_its_source_maps)
 				assembly.setSourceLocation({10*i, 10*i + 3+i, assemblyName});
 				assembly.append(u256(0x71));              // immutble value
 				assembly.append(u256(0));                 // target... modules?
-				assembly.appendImmutableAssignment(string(1, char('a' + i - 1)));
+				assembly.appendImmutableAssignment(std::string(1, char('a' + i - 1)));
 			}
 
 			assembly.appendSubroutine(subAsm);
