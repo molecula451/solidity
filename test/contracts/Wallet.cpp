@@ -38,7 +38,6 @@
 
 #include <test/libsolidity/SolidityExecutionFramework.h>
 
-
 using namespace solidity::test;
 using namespace solidity::util;
 
