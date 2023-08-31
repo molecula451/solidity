@@ -28,7 +28,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-using namespace std;
+
 using namespace solidity::frontend;
 
 // TODO: Fix Boost...
