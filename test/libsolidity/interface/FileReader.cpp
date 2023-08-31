@@ -231,7 +231,7 @@ BOOST_AUTO_TEST_CASE(normalizeCLIPathForVFS_stripping_root_name)
 
 		for (auto convert: {boost::to_lower_copy<std::string>, boost::to_upper_copy<std::string>})
 		{
-			boost::filesystem::path workDirWin = convert(root, locale()) / workDir.relative_path();
+			boost::filesystem::path workDirWin = convert(root, std::locale()) / workDir.relative_path();
 			normalizedPath = FileReader::normalizeCLIPathForVFS(
 				workDirWin,
 				resolveSymlinks
