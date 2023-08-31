@@ -40,7 +40,6 @@ using namespace solidity::frontend::test;
 using namespace solidity::langutil;
 using namespace solidity::test;
 
-
 bytes SolidityExecutionFramework::multiSourceCompileContract(
 	std::map<std::string, std::string> const& _sourceCode,
 	std::optional<std::string> const& _mainSourceName,

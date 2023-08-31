@@ -25,7 +25,6 @@
 #include <boost/test/unit_test.hpp>
 
 
-
 namespace solidity::frontend::test
 {
 

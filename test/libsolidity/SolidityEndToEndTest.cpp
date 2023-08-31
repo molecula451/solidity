@@ -46,7 +46,6 @@
 #include <string>
 #include <tuple>
 
-
 using namespace std::placeholders;
 using namespace solidity;
 using namespace solidity::util;
