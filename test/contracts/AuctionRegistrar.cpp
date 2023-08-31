@@ -32,7 +32,6 @@
 #include <string>
 #include <optional>
 
-
 using namespace solidity;
 using namespace solidity::util;
 using namespace solidity::test;
