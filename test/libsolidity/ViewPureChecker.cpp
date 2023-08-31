@@ -27,7 +27,6 @@
 #include <string>
 #include <tuple>
 
-
 using namespace solidity::langutil;
 
 namespace solidity::frontend::test

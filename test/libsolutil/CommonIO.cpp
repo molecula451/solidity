@@ -31,7 +31,6 @@
 #include <fstream>
 #include <string>
 
-
 using namespace solidity::test;
 
 #define TEST_CASE_NAME (boost::unit_test::framework::current_test_case().p_name)

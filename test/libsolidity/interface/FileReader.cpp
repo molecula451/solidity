@@ -30,7 +30,6 @@
 #include <boost/filesystem.hpp>
 #include <boost/test/unit_test.hpp>
 
-
 using namespace solidity::util;
 using namespace solidity::test;
 

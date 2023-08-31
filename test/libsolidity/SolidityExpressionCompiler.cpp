@@ -40,7 +40,6 @@
 
 #include <boost/test/unit_test.hpp>
 
-
 using namespace solidity::evmasm;
 using namespace solidity::langutil;
 

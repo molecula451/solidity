@@ -46,7 +46,6 @@
 #include <tuple>
 #include <vector>
 
-
 using namespace solidity::util;
 using namespace solidity::langutil;
 using namespace solidity::frontend;

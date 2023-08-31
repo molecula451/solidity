@@ -25,7 +25,6 @@
 
 #include <fstream>
 
-
 using namespace boost::test_tools;
 
 namespace solidity::util::test
