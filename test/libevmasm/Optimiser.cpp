@@ -39,7 +39,6 @@
 #include <tuple>
 #include <memory>
 
-
 using namespace solidity::langutil;
 using namespace solidity::evmasm;
 
