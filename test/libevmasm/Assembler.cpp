@@ -34,7 +34,6 @@
 #include <string>
 #include <tuple>
 
-
 using namespace solidity::langutil;
 using namespace solidity::evmasm;
 using namespace std::string_literals;
