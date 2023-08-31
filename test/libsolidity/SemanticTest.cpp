@@ -34,7 +34,6 @@
 #include <string>
 #include <utility>
 
-
 using namespace solidity;
 using namespace solidity::yul;
 using namespace solidity::langutil;

@@ -28,7 +28,6 @@
 
 #include <test/libsolidity/ABITestsCommon.h>
 
-
 using namespace std::placeholders;
 using namespace solidity::test;
 

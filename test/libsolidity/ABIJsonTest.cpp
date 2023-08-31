@@ -28,7 +28,6 @@
 
 #include <fstream>
 
-
 using namespace solidity;
 using namespace solidity::util;
 using namespace solidity::frontend;

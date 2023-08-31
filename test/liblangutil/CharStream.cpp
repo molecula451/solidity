@@ -28,7 +28,6 @@
 
 #include <boost/test/unit_test.hpp>
 
-
 using namespace solidity::test;
 
 namespace boost::test_tools::tt_detail

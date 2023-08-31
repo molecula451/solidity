@@ -43,7 +43,6 @@
 #include <string>
 #include <iostream>
 
-
 using namespace solidity::langutil;
 using namespace solidity::evmasm;
 

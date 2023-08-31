@@ -28,7 +28,6 @@
 #include <memory>
 #include <stdexcept>
 
-
 using namespace solidity;
 using namespace solidity::util;
 using namespace solidity::util::formatting;

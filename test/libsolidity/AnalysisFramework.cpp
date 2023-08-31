@@ -35,7 +35,6 @@
 
 #include <boost/test/unit_test.hpp>
 
-
 using namespace solidity;
 using namespace solidity::util;
 using namespace solidity::langutil;

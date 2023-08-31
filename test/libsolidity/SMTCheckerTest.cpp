@@ -21,7 +21,6 @@
 
 #include <range/v3/action/remove_if.hpp>
 
-
 using namespace solidity;
 using namespace solidity::langutil;
 using namespace solidity::frontend;
