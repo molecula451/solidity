@@ -38,7 +38,7 @@ struct print_log_value<std::optional<int>>
 {
 	void operator()(std::ostream& _out, std::optional<int> const& _value) const
 	{
-		_out << (_value ? to_string(*_value) : "[std::nullopt_t]");
+		_out << (_value ? to_string(*_value) : "[std::nullopt]");
 	}
 };
 
@@ -47,7 +47,7 @@ struct print_log_value<std::nullopt_t>
 {
 	void operator()(std::ostream& _out, std::nullopt_t const&) const
 	{
-		_out << "[std::nullopt_t]";
+		_out << "[std::nullopt]";
 	}
 };
 
