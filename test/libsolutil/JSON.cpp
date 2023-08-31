@@ -26,6 +26,7 @@
 
 #include <boost/test/unit_test.hpp>
 
+
 namespace solidity::util::test
 {
 
